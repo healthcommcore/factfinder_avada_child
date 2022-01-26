@@ -1,0 +1,77 @@
+/*!
+Theme Name:     Avada Child Theme
+Description:    Child theme for the Avada WP Theme
+Author:         Health Communication Core
+Author URI:     http://www.healthcommcore.org
+Template:       Avada
+Version:        1.0
+Text Domain:    Avada
+*/
+
+
+/** FONTS **/
+$lt: 300;
+$reg: 400;
+$med: 500;
+$semi: 600;
+$bold: 700;
+$body-size: 1.4rem;
+$body-height: 1.4 * $body-size;
+
+/** COLORS **/
+$sky-blue: #5EAAD5;
+
+html {
+  font-size: 100% !important;
+}
+
+body {
+  line-height: $body-height !important;
+  font-size: $body-size !important;
+  font-weight: $reg !important;
+}
+
+.post-content h1,
+.title h1,
+h1 {
+  font-size: 2.6rem !important;
+}
+
+#main h2, 
+.post-content h2, 
+h2 {
+}
+
+.post-content h3, 
+h3 {
+}
+
+/** BANNER **/
+.fusion-header-v4 .factfinder-header.fusion-header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/** MAIN MENU **/
+.fusion-secondary-main-menu {
+  background-color: $sky-blue !important;
+  margin-bottom: 4px;
+}
+
+/** HOMEPAGE **/
+.home #main {
+  padding-top: 0;
+}
+
+.fusion-body .fusion-builder-column-1.homepage-slidertext-container {
+  width: 750px !important;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+/** UTILITIES **/
+.center-content {
+  text-align: center;
+}

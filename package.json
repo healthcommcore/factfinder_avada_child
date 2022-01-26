@@ -1,0 +1,38 @@
+{
+  "name": "starter_avada_child",
+  "version": "1.0.0",
+  "description": "WordPress theme to use in conjunction with Avada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/healthcommcore/starter_avada_child.git"
+  },
+  "author": "Dave Rothfarb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/healthcommcore/starter_avada_child/issues"
+  },
+  "homepage": "https://github.com/healthcommcore/starter_avada_child#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^5.0.16",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.2.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-debug": "^4.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "postcss-assets": "^6.0.0",
+    "sass": "^1.49.0"
+  }
+}
