@@ -203,6 +203,58 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   border-bottom: $med-blue 1px solid;
 }
 
+#main {
+  // Blog list
+  .factfinder-list .fusion-post-content-container h2:first-of-type {
+    padding: 16px 10px 16px 50px;
+  }
+  // Individual post
+  [class *="category-"] .fusion-text:first-of-type h2 {
+    padding: 20px 10px 20px 60px;
+  }
+}
+
+[class *="category-"] .fusion-text:first-of-type h2,
+.factfinder-list .fusion-post-content-container h2:first-of-type {
+  font-family: $eaves !important;
+  font-weight: $med !important;
+  font-size: 1.6rem !important;
+  color: $sky-blue !important;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  background-size: 41px 41px;
+}
+
+.factfinder-list .fusion-post-content-container h2:first-of-type {
+  background-size: 41px 41px;
+}
+
+[class *="category-"] .fusion-text:first-of-type h2 {
+  background-size: 48px 48px;
+}
+
+[class *="category-"] .fusion-text:first-of-type h2::before,
+.factfinder-list .fusion-post-content-container h2:first-of-type::before {
+  content: "CLAIM: ";
+  color: $navy;
+  font-weight: $heavy;
+}
+
+[class *="category-"].tag-true .fusion-text:first-of-type h2,
+.factfinder-list .tag-true .fusion-post-content-container h2:first-of-type {
+  background-image: url('./images/true.svg');
+}
+
+[class *="category-"].tag-false .fusion-text:first-of-type h2,
+.factfinder-list .tag-false .fusion-post-content-container h2:first-of-type {
+  background-image: url('./images/false.svg');
+}
+
+[class *="category-"].tag-unsure .fusion-text:first-of-type h2,
+.factfinder-list .tag-unsure .fusion-post-content-container h2:first-of-type {
+  background-image: url('./images/unsure.svg');
+}
+
 /** BUTTONS **/
 .fusion-button {
   font-size: 1.7rem !important;
