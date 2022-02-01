@@ -10,16 +10,28 @@ Text Domain:    Avada
 
 
 /** FONTS **/
+// names
+$eaves-narrow: "mr-eaves-xl-modern-narrow";
+$eaves: "mr-eaves-xl-modern";
+$zenon: "zenon";
+
+// weights
 $lt: 300;
 $reg: 400;
 $med: 500;
 $semi: 600;
 $bold: 700;
+$heavy: 800;
 $body-size: 1.4rem;
 $body-height: 1.4 * $body-size;
 
 /** COLORS **/
 $sky-blue: #5EAAD5;
+$med-blue: #5791C2;
+$dk-orange: #EE750C;
+$med-orange: #FF952A;
+$dk-green: #406253;
+$navy: #045593;
 
 html {
   font-size: 100% !important;
@@ -37,6 +49,20 @@ h1 {
   font-size: 2.6rem !important;
 }
 
+h1.entry-title,
+h1.fusion-post-title {
+  font-family: $zenon;
+}
+
+.fusion-page-title-bar {
+  .fusion-page-title-wrapper {
+    align-items: end;
+    h1 {
+      margin-bottom: 16px;
+    }
+  }
+}
+
 #main h2, 
 .post-content h2, 
 h2 {
@@ -45,6 +71,15 @@ h2 {
 .post-content h3, 
 h3 {
 }
+
+a {
+  text-decoration: underline !important;
+}
+
+a.fusion-button {
+  text-decoration: none !important;
+}
+
 
 /** BANNER **/
 .fusion-header-v4 .factfinder-header.fusion-header {
@@ -58,20 +93,163 @@ h3 {
   margin-bottom: 4px;
 }
 
-/** HOMEPAGE **/
-.home #main {
-  padding-top: 0;
+.fusion-main-menu a {
+  text-decoration: none !important;
 }
 
-.fusion-body .fusion-builder-column-1.homepage-slidertext-container {
+.fusion-header-layout-v4.avada-menu-highlight-style-bottombar.fusion-top-header:not(.fusion-header-layout-v6) {
+  .fusion-main-menu > ul > li > .fusion-bottombar-highlight::after {
+    border-color: $med-orange;
+  }
+}
+
+body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
+  .fusion-main-menu > ul > li:not(.fusion-menu-item-button) > a.fusion-bottombar-highlight:not(.fusion-main-menu-icon)::after {
+    top: 104%;
+  }
+}
+
+/** HOMEPAGE **/
+.home {
+  #main {
+    padding-top: 0;
+  }
+  .post-content h2 {
+    color: $dk-green;
+  }
+}
+
+.fusion-body .fusion-builder-column-1.homepage-slidertext-container,
+.fusion-body .fusion_builder_column.homepage-narrow-text-container {
   width: 750px !important;
   margin-left: auto;
   margin-right: auto;
+}
+
+.fusion-body .fusion-builder-column-1.homepage-slidertext-container {
   left: 0;
   right: 0;
+}
+
+.homepage-container-margin {
+  padding-top: 50px !important;
+  padding-bottom: 60px !important;
+}
+
+.homepage-container-margin.search-factfinder-bottom-margin {
+  padding-bottom: 20px !important;
+}
+
+// Search the Factfinder
+.homepage-factfinder-topics.fusion-content-boxes {
+  margin-top: 30px;
+  .content-box-column {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+  h3 {
+    border-top: $dk-orange 2px solid;
+    padding-top: 10px !important;
+    font-family: $eaves-narrow;
+    font-size: 1.7rem !important;
+  }
+}
+
+.homepage-factfinder-topics.fusion-content-boxes {
+  margin-bottom: 0;
+}
+
+.homepage-go-to-factfinder-button {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+/** FACT PAGES **/
+.fusion-content-boxes.factfinder-entry-claim {
+  .fusion-column {
+    margin-bottom: 30px !important;
+  }
+  .heading-with-icon {
+    margin-top: 0 !important;
+  }
+  .content-box-heading {
+    font-family: $eaves !important;
+    font-weight: $med !important;
+    font-size: 1.6rem !important;
+    color: $sky-blue !important;
+  }
+  .content-box-heading::before {
+    content: "CLAIM: ";
+    color: $navy;
+    font-weight: $heavy;
+  }
+}
+
+.post { 
+  .fusion-content-boxes.factfinder-entry-claim {
+    .heading-with-icon .image {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#main .factfinder-entry-text h2, 
+.post-content .factfinder-entry-text h2, 
+.factfinder-entry-text h2 {
+  margin-bottom: 20px;
+  font-family: $eaves !important;
+  font-weight: $heavy !important;
+  font-size: 1.6rem !important;
+  border-bottom: $med-blue 1px solid;
+}
+
+/** BUTTONS **/
+.fusion-button {
+  font-size: 1.7rem !important;
 }
 
 /** UTILITIES **/
 .center-content {
   text-align: center;
 }
+
+/** FOOTER **/
+.footer-menu-and-legal {
+    text-align: center;
+	  color: #fff;
+}
+
+.footer-menu-and-legal a {
+    text-decoration: underline;
+	  color: #fff;
+		font-weight: 400;
+}
+
+.footer-menu-and-legal a:hover {
+    color: #ccc;
+}
+
+.footer-menu-and-legal .footer-menu {
+		display: inline-block
+}
+
+.footer-menu-and-legal .footer-menu li {
+    float: left;
+    padding: 0 10px;
+    border-right: #fff 1px solid;
+}
+
+.footer-menu-and-legal .footer-menu li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+footer .footer-menu-and-legal .footer-menu a {
+    font-size: 0.9em;
+}
+footer .footer-menu-and-legal .footer-legal{
+    font-size: 0.8em;
+}
+footer .footer-menu-and-legal .footer-legal a{
+    font-size: 1.0em;
+} 

@@ -17,6 +17,8 @@ add_filter( 'image_size_names_choose', 'staff_photo_size' );
 
 add_action('widgets_init', 'header_widgets_init');
 
+//add_action('wp_footer', 'show_the_template');
+
 function staff_photo_size( $sizes ) {
   return array_merge( $sizes, array(
     'staff-photo' => __('Staff photo size'),
@@ -33,3 +35,9 @@ function header_widgets_init() {
     'after_title' => '</h2>',
   ) );
 }
+
+function show_the_template() {
+  global $template;
+  print_r($template);
+}
+
