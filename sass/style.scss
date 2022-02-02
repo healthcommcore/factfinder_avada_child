@@ -43,6 +43,13 @@ body {
   font-weight: $reg !important;
 }
 
+
+
+.content-margin {
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
 .post-content h1,
 .title h1,
 h1 {
@@ -66,6 +73,8 @@ h1.fusion-post-title {
 #main h2, 
 .post-content h2, 
 h2 {
+  font-size: 1.9rem;
+  margin-bottom: 30px;
 }
 
 .post-content h3, 
@@ -78,6 +87,10 @@ a {
 
 a.fusion-button {
   text-decoration: none !important;
+}
+
+#main .post-content p {
+  margin-bottom: 30px;
 }
 
 
@@ -165,23 +178,53 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 }
 
 /** FACT PAGES **/
-.fusion-content-boxes.factfinder-entry-claim {
-  .fusion-column {
-    margin-bottom: 30px !important;
+// Claim key
+.claim-key-column {
+  align-self: center !important;
+}
+
+.claim-key-content {
+  display: flex;
+  justify-content: flex-end !important;
+  p {
+    float: left;
+    margin-bottom: 0 !important;
+    line-height: 1.0;
   }
-  .heading-with-icon {
-    margin-top: 0 !important;
+  img {
+    margin-left: 20px;
   }
-  .content-box-heading {
-    font-family: $eaves !important;
-    font-weight: $med !important;
-    font-size: 1.6rem !important;
-    color: $sky-blue !important;
-  }
-  .content-box-heading::before {
-    content: "CLAIM: ";
-    color: $navy;
-    font-weight: $heavy;
+}
+.fusion-body .fusion-button-default-size.claim-key-button {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 0.8;
+}
+
+.claim-key-button span {
+  font-size: 1.5rem;
+}
+
+// Content
+#main {
+  .fusion-content-boxes.factfinder-entry-claim {
+    .fusion-column {
+      margin-bottom: 30px !important;
+    }
+    .heading-with-icon {
+      margin-top: 0 !important;
+    }
+    .content-box-heading {
+      font-family: $eaves !important;
+      font-weight: $med !important;
+      font-size: 1.6rem !important;
+      color: $sky-blue !important;
+    }
+    .content-box-heading::before {
+      content: "CLAIM: ";
+      color: $navy;
+      font-weight: $heavy;
+    }
   }
 }
 
@@ -194,19 +237,29 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 }
 
 #main .factfinder-entry-text h2, 
+#main .factfinder-list .fusion-post-content-container h2,
+.post-content .factfinder-entry-text h2, 
+.factfinder-entry-text h2 {
+  font-family: $eaves !important;
+  font-weight: $heavy !important;
+  color: $navy !important;
+  border-bottom: $med-blue 1px solid;
+}
+
+#main .factfinder-entry-text h2, 
 .post-content .factfinder-entry-text h2, 
 .factfinder-entry-text h2 {
   margin-bottom: 20px;
-  font-family: $eaves !important;
-  font-weight: $heavy !important;
   font-size: 1.6rem !important;
-  border-bottom: $med-blue 1px solid;
 }
 
 #main {
   // Blog list
   .factfinder-list .fusion-post-content-container h2:first-of-type {
     padding: 16px 10px 16px 50px;
+    border-bottom: none;
+    font-weight: $med !important;
+    color: $sky-blue !important;
   }
   // Individual post
   [class *="category-"] .fusion-text:first-of-type h2 {
@@ -255,6 +308,35 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   background-image: url('./images/unsure.svg');
 }
 
+/** NORMAL PAGES **/
+.fusion-content-boxes.factfinder-callout-box {
+  margin-bottom: 0;
+  .content-wrapper-background {
+    padding: 0;
+  }
+  .content-container,
+  .heading .content-box-heading {
+    padding-left: 26px;
+  }
+  .heading .content-box-heading {
+    background: $navy;
+    font-family: $eaves;
+    font-weight: $bold;
+    font-size: 1.8rem !important;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 26px;
+  }
+  .content-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 60px;
+    p {
+      margin-bottom: 40px !important;
+    }
+  }
+}
+  
 /** BUTTONS **/
 .fusion-button {
   font-size: 1.7rem !important;
