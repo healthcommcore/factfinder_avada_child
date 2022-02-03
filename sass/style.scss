@@ -126,14 +126,28 @@ a.fusion-button {
 
 .fusion-header-layout-v4.avada-menu-highlight-style-bottombar.fusion-top-header:not(.fusion-header-layout-v6) {
   .fusion-main-menu > ul > li > .fusion-bottombar-highlight::after {
-    border-color: $med-orange;
+    //border-color: $med-orange;
   }
+}
+
+/*
+.avada-menu-highlight-style-bottombar.fusion-top-header:not(.fusion-header-layout-v6) .fusion-main-menu > ul > li.current-menu-item > .fusion-bottombar-highlight::after,
+.avada-menu-highlight-style-bottombar.fusion-top-header:not(.fusion-header-layout-v6) .fusion-main-menu > ul > li > .fusion-bottombar-highlight:hover::after {
+  border: none;
 }
 
 body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   .fusion-main-menu > ul > li:not(.fusion-menu-item-button) > a.fusion-bottombar-highlight:not(.fusion-main-menu-icon)::after {
     top: 104%;
+    border-width: 4px;
   }
+}
+
+*/
+
+.fusion-body .fusion-main-menu .current_page_item > a:focus::after,
+.fusion-body .fusion-main-menu .current_page_item > a:active::after {
+  border-color: #000;
 }
 
 /** HOMEPAGE **/
