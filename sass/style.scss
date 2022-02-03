@@ -44,11 +44,18 @@ body {
 }
 
 
-
+//.home .fusion-builder-row,
 .content-margin {
-  margin-left: 120px;
-  margin-right: 120px;
+  margin-left: 120px !important;
+  margin-right: 120px !important;
 }
+
+/*
+.home .fusion-builder-row .fusion-builder-row {
+  margin-left: initial !important;
+  margin-right: initial !important;
+}
+*/
 
 .post-content h1,
 .title h1,
@@ -126,12 +133,22 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 .home {
   #main {
     padding-top: 0;
+    .post-content p {
+      margin-bottom: 20px;
+    }
   }
   .post-content h2 {
     color: $dk-green;
   }
+  h1 p {
+    margin-bottom: 0 !important;
+  }
+  h2.title-heading-left {
+    margin-left: -20px !important;
+  }
 }
 
+.reduced-width,
 .fusion-body .fusion-builder-column-1.homepage-slidertext-container,
 .fusion-body .fusion_builder_column.homepage-narrow-text-container {
   width: 750px !important;
@@ -175,6 +192,17 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 .homepage-go-to-factfinder-button {
   margin-top: 30px;
   margin-bottom: 60px;
+}
+
+// Misinformation
+.misinformation-content {
+  align-self: center;
+}
+
+.fusion-body {
+  .fusion_builder_column.misinformation-graphic {
+    margin-bottom: 0;
+  }
 }
 
 /** FACT PAGES **/
@@ -345,6 +373,15 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 /** UTILITIES **/
 .center-content {
   text-align: center;
+}
+
+.indent-more {
+  margin-left: 60px;
+}
+
+.content-spacing {
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 /** FOOTER **/
