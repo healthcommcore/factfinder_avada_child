@@ -509,11 +509,11 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 }
 
 footer .footer-menu-and-legal .footer-menu a {
-    font-size: 0.9em;
+    font-size: 1.0em;
 }
+footer.fusion-footer-widget-area .widget a:hover {
+    color: $navy;
+} 
 footer .footer-menu-and-legal .footer-legal{
     font-size: 0.8em;
 }
-footer .footer-menu-and-legal .footer-legal a{
-    font-size: 1.0em;
-} 
