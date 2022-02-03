@@ -28,6 +28,7 @@ $body-height: 1.4 * $body-size;
 /** COLORS **/
 $sky-blue: #5EAAD5;
 $med-blue: #5791C2;
+$lt-blue: #CCE6FA;
 $dk-orange: #EE750C;
 $med-orange: #FF952A;
 $dk-green: #406253;
@@ -84,8 +85,14 @@ h2 {
   margin-bottom: 30px;
 }
 
-.post-content h3, 
-h3 {
+#main {
+  .post-content h3, 
+  h3 {
+    font-weight: $bold;
+    font-size: 1.8rem;
+    border-bottom: $med-blue 1px solid;
+    margin-bottom: 20px;
+  }
 }
 
 a {
@@ -171,6 +178,11 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 }
 
 // Search the Factfinder
+#main .post-content .homepage-factfinder-topics.fusion-content-boxes h3 {
+  border-bottom: none;
+  font-weight: $reg;
+}
+
 .homepage-factfinder-topics.fusion-content-boxes {
   margin-top: 30px;
   .content-box-column {
@@ -248,11 +260,14 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
       font-size: 1.6rem !important;
       color: $sky-blue !important;
     }
-    .content-box-heading::before {
-      content: "CLAIM: ";
-      color: $navy;
-      font-weight: $heavy;
-    }
+  }
+  .factfinder-list .fusion-post-content-container h2::before {
+    content: "CLAIM: ";
+    color: $navy;
+    font-weight: $heavy;
+  }
+  .factfinder-callout-box .content-box-heading::before {
+    content: "";
   }
 }
 
@@ -264,39 +279,35 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   }
 }
 
-#main .factfinder-entry-text h2, 
-#main .factfinder-list .fusion-post-content-container h2,
-.post-content .factfinder-entry-text h2, 
-.factfinder-entry-text h2 {
-  font-family: $eaves !important;
-  font-weight: $heavy !important;
+#main .factfinder-entry-text h3, 
+#main .factfinder-list .fusion-post-content-container h3,
+.post-content .factfinder-entry-text h3, 
+.factfinder-entry-text h3 {
   color: $navy !important;
-  border-bottom: $med-blue 1px solid;
+  font-size: 1.6rem;
 }
 
-#main .factfinder-entry-text h2, 
-.post-content .factfinder-entry-text h2, 
-.factfinder-entry-text h2 {
-  margin-bottom: 20px;
-  font-size: 1.6rem !important;
+#main .factfinder-entry-text h3, 
+.post-content .factfinder-entry-text h3, 
+.factfinder-entry-text h3 {
 }
 
 #main {
   // Blog list
-  .factfinder-list .fusion-post-content-container h2:first-of-type {
+  .factfinder-list .fusion-post-content-container h2 {
     padding: 16px 10px 16px 50px;
     border-bottom: none;
     font-weight: $med !important;
     color: $sky-blue !important;
   }
   // Individual post
-  [class *="category-"] .fusion-text:first-of-type h2 {
+  [class *="category-"] .fusion-text h2 {
     padding: 20px 10px 20px 60px;
   }
 }
 
-[class *="category-"] .fusion-text:first-of-type h2,
-.factfinder-list .fusion-post-content-container h2:first-of-type {
+[class *="category-"] .fusion-text h2,
+.factfinder-list .fusion-post-content-container h2 {
   font-family: $eaves !important;
   font-weight: $med !important;
   font-size: 1.6rem !important;
@@ -306,7 +317,7 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   background-size: 41px 41px;
 }
 
-.factfinder-list .fusion-post-content-container h2:first-of-type {
+.factfinder-list .fusion-post-content-container h2 {
   background-size: 41px 41px;
 }
 
@@ -314,33 +325,46 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   background-size: 48px 48px;
 }
 
-[class *="category-"] .fusion-text:first-of-type h2::before,
-.factfinder-list .fusion-post-content-container h2:first-of-type::before {
+[class *="category-"] .fusion-text h2::before,
+.factfinder-list .fusion-post-content-container h2 {
   content: "CLAIM: ";
   color: $navy;
   font-weight: $heavy;
 }
 
-[class *="category-"].tag-true .fusion-text:first-of-type h2,
-.factfinder-list .tag-true .fusion-post-content-container h2:first-of-type {
+[class *="category-"].tag-true .fusion-text h2,
+.factfinder-list .tag-true .fusion-post-content-container h2 {
   background-image: url('./images/true.svg');
 }
 
-[class *="category-"].tag-false .fusion-text:first-of-type h2,
-.factfinder-list .tag-false .fusion-post-content-container h2:first-of-type {
+[class *="category-"].tag-false .fusion-text h2,
+.factfinder-list .tag-false .fusion-post-content-container h2 {
   background-image: url('./images/false.svg');
 }
 
-[class *="category-"].tag-unsure .fusion-text:first-of-type h2,
-.factfinder-list .tag-unsure .fusion-post-content-container h2:first-of-type {
+[class *="category-"].tag-unsure .fusion-text h2,
+.factfinder-list .tag-unsure .fusion-post-content-container h2 {
   background-image: url('./images/unsure.svg');
 }
 
 /** NORMAL PAGES **/
+#main {
+  .fusion-content-boxes.factfinder-callout-box {
+    .heading .content-box-heading {
+      font-family: $eaves;
+      font-weight: $bold;
+      font-size: 1.8rem !important;
+    }
+  }
+}
+
 .fusion-content-boxes.factfinder-callout-box {
   margin-bottom: 0;
   .content-wrapper-background {
     padding: 0;
+  }
+  .heading {
+    margin-bottom: 0;
   }
   .content-container,
   .heading .content-box-heading {
@@ -348,9 +372,6 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   }
   .heading .content-box-heading {
     background: $navy;
-    font-family: $eaves;
-    font-weight: $bold;
-    font-size: 1.8rem !important;
     padding-top: 13px;
     padding-bottom: 13px;
     padding-right: 26px;
@@ -364,6 +385,64 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
     }
   }
 }
+.fusion-content-boxes.factfinder-callout-box.factfinder-table {
+  .content-container {
+    padding: 0;
+    table {
+      margin-bottom: 30px;
+    }
+    table, th, td {
+      border: none;
+    }
+    th, td {
+      vertical-align: middle;
+      padding: 16px 26px;
+    }
+    thead {
+      background: #CCE6FA;
+    }
+    tr:nth-child(even) td {
+      background: #EBF6FD;
+    }
+    th {
+      font-family: $eaves;
+      font-weight: $bold;
+      text-align: left;
+      color: $navy;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+  }
+  small {
+    color: $navy;
+  }
+  p:last-child {
+    line-height: 1.1em;
+  }
+}
+#main {
+  .fusion-content-boxes.factfinder-vert-contentbox {
+    .heading {
+      background: $lt-blue;
+    }
+    h3 {
+      margin: 0;
+      border: none;
+      text-transform: uppercase;
+      padding: 10px 26px;
+      font-weight: $bold;
+    }
+    h3::first-letter {
+      border-bottom: $navy 2px solid;
+    }
+    .content-container {
+      padding-left: 26px;
+      padding-right: 40px;
+    }
+  }
+}
+
   
 /** BUTTONS **/
 .fusion-button {
