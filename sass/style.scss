@@ -237,6 +237,42 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   }
 }
 
+/** SEARCH THE FACTFINDER **/
+// Search and filter
+.searchandfilter {
+  ul {
+    padding-left: 0;
+  }
+  li {
+    float: left;
+  }
+  li:nth-child(odd) {
+    width: 25%;
+  }
+  li:nth-child(even) {
+    width: 50%;
+  }
+  .sf-field-category li {
+    width: auto;
+    float: none;
+  }
+/*
+  .sf-field-category li:nth-child(3)::after {
+    content: "";
+    display: block;
+    clear: left;
+  }
+  .sf-field-category li:nth-child(n+4) {
+    float: left;
+  }
+  .sf-field-category li:nth-child(n+4)::after {
+    content: "";
+    display: block;
+    clear: left;
+  }
+*/
+}
+
 /** FACT PAGES **/
 // Claim key
 .claim-key-column {
