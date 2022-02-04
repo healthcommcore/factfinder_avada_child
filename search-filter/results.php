@@ -68,17 +68,29 @@ if ( $query->have_posts() )
 		?>
 		<article <?php post_class( $post_class ); ?>>
       <div class="fusion-post-content post-content">
+      <?php // Get use Avada to get the title ?>
       <?php echo avada_render_post_title( $post->ID ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		  <div class="fusion-post-content-container">	
-      <?php //echo avada_render_post_title( $post->ID ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
-      <?php do_action( 'avada_blog_post_content' ); ?>
-			<!--<p><br /><?php //the_excerpt(); ?></p> -->
+      <?php 
+        // Use the Avada class to get the excerpt from UI settings,
+        // then use a fusion function to render the excerpt output,
+        // allowing html markup (2nd param false)
+      ?>
+      <?php
+        $length = 50;
+        if ( ! is_null( Avada()->settings->get( 'excerpt_length_blog' ) ) ) {
+          $length = Avada()->settings->get( 'excerpt_length_blog' );
+        }
+      ?>
+	    <?php echo fusion_get_post_content_excerpt( $length, false, $post->ID ) ?>
 			<?php 
+      /*
 				if ( has_post_thumbnail() ) {
 					echo '<p>';
 					the_post_thumbnail("small");
 					echo '</p>';
 				}
+        */
 			?>
 			<p><?php the_category(); ?></p>
 			<p><?php the_tags(); ?></p>
@@ -92,21 +104,23 @@ if ( $query->have_posts() )
 		<?php
 	}
 	?>
-	Page <?php echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br />
+  <!--
+	Page <?php //echo $query->query['paged']; ?> of <?php echo $query->max_num_pages; ?><br />
 	
-	<div class="pagination">
-		
-		<div class="nav-previous"><?php next_posts_link( 'Older posts', $query->max_num_pages ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></div>
-		<?php
-			/* example code for using the wp_pagenavi plugin */
-			if (function_exists('wp_pagenavi'))
-			{
-				echo "<br />";
-				wp_pagenavi( array( 'query' => $query ) );
-			}
-		?>
-	</div>
+      <div class="pagination">
+        
+        <div class="nav-previous"><?php next_posts_link( 'Older posts', $query->max_num_pages ); ?></div>
+        <div class="nav-next"><?php previous_posts_link( 'Newer posts' ); ?></div>
+        <?php
+          /* example code for using the wp_pagenavi plugin */
+          if (function_exists('wp_pagenavi'))
+          {
+            echo "<br />";
+            wp_pagenavi( array( 'query' => $query ) );
+          }
+        ?>
+      </div>
+  -->
     </div><!--fusion-posts-container -->
   </div><!--fusion-blog-shortcode -->
 	<?php
