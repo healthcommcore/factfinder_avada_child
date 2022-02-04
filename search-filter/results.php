@@ -83,6 +83,7 @@ if ( $query->have_posts() )
         }
       ?>
 	    <?php echo fusion_get_post_content_excerpt( $length, false, $post->ID ) ?>
+      
 			<?php 
       /*
 				if ( has_post_thumbnail() ) {
@@ -92,15 +93,25 @@ if ( $query->have_posts() )
 				}
         */
 			?>
-			<p><?php the_category(); ?></p>
-			<p><?php the_tags(); ?></p>
-			<p><small><?php the_date(); ?></small></p>
+      <!--
+          <p><?php //the_category(); ?></p>
+          <p><?php //the_tags(); ?></p>
+          <p><small><?php //the_date(); ?></small></p>
 			
+      -->
         </div><!-- fusion-post-content-container -->
+        <div class="fusion-meta-info">
+          <?php echo fusion_render_post_metadata( 'standard' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+          <?php $link_target = ( 'yes' === fusion_get_page_option( 'link_icon_target', $post->ID ) || 'yes' === fusion_get_page_option( 'post_links_target', $post->ID ) ) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>
+          <div class="fusion-alignright">
+            <a href="<?php echo esc_url_raw( get_permalink() ); ?>" class="fusion-read-more"<?php echo $link_target; // phpcs:ignore WordPress.Security.EscapeOutput ?> aria-label="<?php esc_attr_e( 'More on', 'Avada' ); ?> <?php the_title_attribute(); ?>">
+              <?php echo esc_textarea( apply_filters( 'avada_read_more_name', esc_attr__( 'Read more', 'Avada' ) ) ); ?>
+            </a>
+          </div><!-- fusion-alignright -->
+        </div><!-- fusion-meta-info -->
       </div><!-- fusion-post-content -->
 		</article>
 		
-		<hr />
 		<?php
 	}
 	?>
@@ -127,6 +138,6 @@ if ( $query->have_posts() )
 }
 else
 {
-	echo "No Results Found";
+	echo "No results found";
 }
 ?>
