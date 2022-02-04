@@ -300,6 +300,7 @@ if ( $content_align && ( 'grid' === $blog_layout || 'masonry' === $blog_layout |
 					<div class="fusion-timeline-arrow"></div>
 				<?php endif; ?>
 
+<!-- MAIN POST TITLE -->
 				<div class="fusion-post-content post-content">
 					<?php echo avada_render_post_title( $post->ID ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 
