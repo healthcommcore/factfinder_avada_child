@@ -14,6 +14,8 @@ Text Domain:    Avada
 $eaves-narrow: "mr-eaves-xl-modern-narrow";
 $eaves: "mr-eaves-xl-modern";
 $zenon: "zenon";
+$realist: "realist";
+$realistnarr: "realistnarrow";
 
 // weights
 $lt: 300;
@@ -33,6 +35,9 @@ $dk-orange: #EE750C;
 $med-orange: #FF952A;
 $dk-green: #406253;
 $navy: #045593;
+
+/** VARIABLES **/
+$saf-padding: 40px;
 
 html {
   font-size: 100% !important;
@@ -92,6 +97,15 @@ h2 {
     font-size: 1.8rem;
     border-bottom: $med-blue 1px solid;
     margin-bottom: 20px;
+  }
+}
+
+#main {
+  .post-content h4, 
+  h4 {
+    font-weight: $semi;
+    font-size: 1.42rem;
+    padding-bottom: 0;
   }
 }
 
@@ -240,22 +254,70 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 /** SEARCH THE FACTFINDER **/
 // Search and filter
 .searchandfilter {
+  font-family: $realistnarr;
+  h4 {
+    text-transform: uppercase;
+    border-bottom: $navy 2px solid;
+  }
   ul {
     padding-left: 0;
   }
-  li {
+  ul li {
     float: left;
+    padding-top: 0;
   }
   li:nth-child(odd) {
-    width: 25%;
+    width: 27%;
   }
   li:nth-child(even) {
-    width: 50%;
+    width: 46%;
+    padding: 0 $saf-padding;
+    border-left: $navy 1px solid;
+    border-right: $navy 1px solid;
+  }
+  li:nth-child(1) {
+    padding-right: $saf-padding;
+  }
+  li:nth-child(3) {
+    padding-left: $saf-padding;
   }
   .sf-field-category li {
     width: auto;
     float: none;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: 1em auto;
   }
+  input[type="checkbox"] {
+    cursor: pointer;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-content: center;
+  }
+  input[type="checkbox"]::before {
+    content: ""; 
+    box-shadow: inset 11px 11px $navy;
+    width: 11px;
+    height: 11px;
+    transform: scale(0);
+  }
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  input[type=checkbox],
+  input[type=text], select {
+    border: $med-orange 2px solid;
+  }
+  input[type="text"], select {
+    border-radius: revert;
+  }
+
 /*
   .sf-field-category li:nth-child(3)::after {
     content: "";
