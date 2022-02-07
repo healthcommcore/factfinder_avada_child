@@ -82,7 +82,12 @@ if ( $query->have_posts() )
           $length = Avada()->settings->get( 'excerpt_length_blog' );
         }
       ?>
-	    <?php echo fusion_get_post_content_excerpt( $length, false, $post->ID ) ?>
+	    <?php 
+        $excerpt = fusion_get_post_content_excerpt( $length, false, $post->ID );
+        $break_tag_removed = substr($excerpt, 4);
+        echo $break_tag_removed;
+      ?>
+	    <?php //echo fusion_get_post_content_excerpt( $length, false, $post->ID ) ?>
       
 			<?php 
       /*
