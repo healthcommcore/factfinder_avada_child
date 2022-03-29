@@ -367,6 +367,32 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 */
 }
 
+// Results
+#main .factfinder-list {
+  h2 {
+    margin-bottom: 0;
+  }
+  article p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.factfinder-list {
+  h2 a {
+    text-decoration: none !important;
+    font-family: $eaves;
+    font-weight: $heavy;
+    font-size: 1.7rem;
+  }
+  .fusion-meta-info {
+    border: none;
+    margin-top: 10px;
+    .fusion-read-more {
+      font-size: 1.4rem;
+    }
+  }
+}
+
 /** FACT PAGES **/
 // Claim key
 .fusion-body .fusion-row .fusion-flex-container.claim-key-container {
