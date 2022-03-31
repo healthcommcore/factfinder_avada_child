@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php get_header(); ?>
 <div class="content-margin">
-  <?php echo do_shortcode ('[fusion_global id="248"]'); ?>
+  <?php echo do_shortcode ('[fusion_global id="220"]'); ?>
   <section id="content" <?php Avada()->layout->add_class( 'content_class' ); ?> <?php Avada()->layout->add_style( 'content_style' ); ?>>
     <?php if ( category_description() ) : ?>
       <div id="post-<?php the_ID(); ?>" <?php post_class( 'fusion-archive-description' ); ?>>
