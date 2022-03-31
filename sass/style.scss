@@ -130,6 +130,9 @@ a.fusion-button {
   margin-bottom: 30px;
 }
 
+ul, ol {
+  margin-top: -20px;
+}
 
 /** BANNER **/
 .fusion-header-v4 .factfinder-header.fusion-header {
@@ -346,27 +349,10 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   input[type="text"], select {
     border-radius: revert;
     height: revert;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding: 7px;
     color: $navy;
     font-size: 1.3rem;
   }
-
-/*
-  .sf-field-category li:nth-child(3)::after {
-    content: "";
-    display: block;
-    clear: left;
-  }
-  .sf-field-category li:nth-child(n+4) {
-    float: left;
-  }
-  .sf-field-category li:nth-child(n+4)::after {
-    content: "";
-    display: block;
-    clear: left;
-  }
-*/
 }
 
 // Results
