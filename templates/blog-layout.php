@@ -100,7 +100,7 @@ if ( $content_align && ( 'grid' === $blog_layout || 'masonry' === $blog_layout |
 	$container_class .= 'fusion-blog-layout-' . $content_align . '';
 }
 ?>
-<div id="posts-container" class="fusion-blog-archive <?php echo esc_attr( $wrapper_class ); ?>fusion-clearfix">
+<div id="posts-container" class="fusion-blog-archive <?php echo esc_attr( $wrapper_class ); ?>fusion-clearfix factfinder-list">
 	<div class="<?php echo esc_attr( $container_class ); ?>" data-pages="<?php echo (int) $number_of_pages; ?>">
 		<?php if ( 'timeline' === $blog_layout ) : ?>
 			<?php // Add the timeline icon. ?>
@@ -333,8 +333,20 @@ if ( $content_align && ( 'grid' === $blog_layout || 'masonry' === $blog_layout |
 						 *
 						 * @hooked avada_render_blog_post_content - 10 (outputs the post content wrapped with a container).
 						 */
-						do_action( 'avada_blog_post_content' );
+						//do_action( 'avada_blog_post_content' );
 						?>
+            <?php
+              $length = 50;
+              if ( ! is_null( Avada()->settings->get( 'excerpt_length_blog' ) ) ) {
+                $length = Avada()->settings->get( 'excerpt_length_blog' );
+              }
+            ?>
+            <?php 
+              $excerpt = fusion_get_post_content_excerpt( $length, false, $post->ID );
+              $break_tag_removed = substr($excerpt, 4);
+              echo $break_tag_removed;
+            ?>
+            <?php //echo fusion_get_post_content_excerpt( $length, false, $post->ID ) ?>
 					</div>
 				</div>
 

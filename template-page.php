@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php //do_action( 'fusion_template_content' ); ?>
       </div>
       -->
-      <?php $test = do_action( 'fusion_template_content' ); print_r($test); ?>
+      <?php //do_action( 'fusion_template_content' ); ?>
       <?php 
         while (have_posts()) {
           the_post();
