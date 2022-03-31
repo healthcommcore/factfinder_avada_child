@@ -31,6 +31,7 @@ $body-height: 1.4 * $body-size;
 $sky-blue: #5EAAD5;
 $med-blue: #5791C2;
 $lt-blue: #CCE6FA;
+$pale-orange: #fdf7f1;
 $dk-orange: #EE750C;
 $med-orange: #FF952A;
 $dk-green: #406253;
@@ -385,11 +386,32 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
     font-weight: $heavy;
     font-size: 1.7rem;
   }
+  .readmore-margin {
+    margin-bottom: 20px;
+  }
+}
+.type-post {
   .fusion-meta-info {
+    margin-top: 0;
+  }
+}
+
+.factfinder-list {
+  .fusion-meta-info {
+    margin-top: 20px;
+  }
+}
+
+.type-post,
+.factfinder-list {
+  .fusion-meta-info {
+    display: inline-block;
     border: none;
-    margin-top: 10px;
-    .fusion-read-more {
-      font-size: 1.4rem;
+    font-size: 1.0rem;
+    background-color: $pale-orange;
+    padding: 0.1em 0.8em 0.2em;
+    .fusion-alignleft {
+      width: auto;
     }
   }
 }
@@ -397,7 +419,7 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
 /** FACT PAGES **/
 // Claim key
 .fusion-body .fusion-row .fusion-flex-container.claim-key-container {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .claim-key-column {

@@ -105,14 +105,14 @@ if ( $query->have_posts() )
 			
       -->
         </div><!-- fusion-post-content-container -->
-        <div class="fusion-meta-info">
-          <?php echo fusion_render_post_metadata( 'standard' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
-          <?php $link_target = ( 'yes' === fusion_get_page_option( 'link_icon_target', $post->ID ) || 'yes' === fusion_get_page_option( 'post_links_target', $post->ID ) ) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>
-          <div class="fusion-alignright">
+          <div class="readmore-margin fusion-alignright">
             <a href="<?php echo esc_url_raw( get_permalink() ); ?>" class="fusion-read-more"<?php echo $link_target; // phpcs:ignore WordPress.Security.EscapeOutput ?> aria-label="<?php esc_attr_e( 'More on', 'Avada' ); ?> <?php the_title_attribute(); ?>">
               <?php echo esc_textarea( apply_filters( 'avada_read_more_name', esc_attr__( 'Read more', 'Avada' ) ) ); ?>
             </a>
           </div><!-- fusion-alignright -->
+        <div class="fusion-meta-info">
+          <?php echo fusion_render_post_metadata( 'standard' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+          <?php $link_target = ( 'yes' === fusion_get_page_option( 'link_icon_target', $post->ID ) || 'yes' === fusion_get_page_option( 'post_links_target', $post->ID ) ) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>
         </div><!-- fusion-meta-info -->
       </div><!-- fusion-post-content -->
 		</article>

@@ -386,6 +386,11 @@ if ( $content_align && ( 'grid' === $blog_layout || 'masonry' === $blog_layout |
 							</div>
 						<?php endif; ?>
 					<?php else : ?>
+            <div class="readmore-margin fusion-alignright">
+              <a href="<?php echo esc_url_raw( get_permalink() ); ?>" class="fusion-read-more"<?php echo $link_target; // phpcs:ignore WordPress.Security.EscapeOutput ?> aria-label="<?php esc_attr_e( 'More on', 'Avada' ); ?> <?php the_title_attribute(); ?>">
+                <?php echo esc_textarea( apply_filters( 'avada_read_more_name', esc_attr__( 'Read More', 'Avada' ) ) ); ?>
+              </a>
+            </div>
 						<div class="fusion-meta-info">
 							<?php // Render all meta data for medium and large layouts. ?>
 							<?php if ( 'large' === $blog_layout || 'medium' === $blog_layout ) : ?>
@@ -395,11 +400,6 @@ if ( $content_align && ( 'grid' === $blog_layout || 'masonry' === $blog_layout |
 							<?php // Render read more for medium/large and medium/large alternate layouts. ?>
 							<?php if ( $display_read_more ) : ?>
 								<?php $link_target = ( 'yes' === fusion_get_page_option( 'link_icon_target', $post->ID ) || 'yes' === fusion_get_page_option( 'post_links_target', $post->ID ) ) ? ' target="_blank" rel="noopener noreferrer"' : ''; ?>
-								<div class="fusion-alignright">
-									<a href="<?php echo esc_url_raw( get_permalink() ); ?>" class="fusion-read-more"<?php echo $link_target; // phpcs:ignore WordPress.Security.EscapeOutput ?> aria-label="<?php esc_attr_e( 'More on', 'Avada' ); ?> <?php the_title_attribute(); ?>">
-										<?php echo esc_textarea( apply_filters( 'avada_read_more_name', esc_attr__( 'Read More', 'Avada' ) ) ); ?>
-									</a>
-								</div>
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>
