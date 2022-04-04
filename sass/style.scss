@@ -92,7 +92,7 @@ h1.fusion-post-title {
 #main h2, 
 .post-content h2, 
 h2 {
-  font-size: 1.9rem;
+  font-size: 2.0rem;
   margin-bottom: 30px;
 }
 
@@ -271,6 +271,9 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   h4 {
     text-transform: uppercase;
     border-bottom: $navy 2px solid;
+    span:last-child {
+      font-weight: $bold;
+    }
   }
   label {
     display: block;
@@ -370,7 +373,7 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
     text-decoration: none !important;
     font-family: $eaves;
     font-weight: $heavy;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
   .readmore-margin {
     margin-bottom: 20px;
