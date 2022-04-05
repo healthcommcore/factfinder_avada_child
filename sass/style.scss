@@ -26,12 +26,15 @@ $bold: 700;
 $heavy: 800;
 $body-size: 1.4rem;
 $body-height: 1.4 * $body-size;
+$mobile-body-size: 1.3rem;
+$mobile-body-height: 1.4 * $mobile-body-size;
 
 /** COLORS **/
 $sky-blue: #5EAAD5;
 $med-blue: #5791C2;
 $lt-blue: #CCE6FA;
 $pale-orange: #fdf7f1;
+$mobile-header-orange: #fdf3e9;
 $dk-orange: #EE750C;
 $med-orange: #FF952A;
 $dk-green: #406253;
@@ -707,4 +710,77 @@ footer.fusion-footer-widget-area .widget a:hover {
 } 
 footer .footer-menu-and-legal .footer-legal{
     font-size: 0.8em;
+}
+
+@media (max-width: 800px) {
+  body {
+    line-height: $mobile-body-height !important;
+    font-size: $mobile-body-size !important;
+  }
+  .post-content h1, .title h1, h1 {
+    font-size: 2.0rem !important;
+  }
+  #main h2, .post-content h2, h2 {
+    font-size: 1.8rem;
+  }
+/** HEADER **/
+  .fusion-mobile-menu-design-classic.fusion-header-v4 .fusion-header, .fusion-mobile-menu-design-classic.fusion-header-v5 .fusion-header {
+    padding: 10px 0 0 0 !important;
+  }
+  .factfinder-header {
+    .fusion-flex-container .fusion-row,
+    .fusion-flex-container .fusion-row .fusion-flex-column {
+      display: block;
+      text-align: center;
+    }
+    .fusion-logo {
+      width: 100% !important;
+    }
+    .fusion-logo a {
+      display: inline-block;
+    }
+    .header-inst-logo-wrapper {
+      display: inline-block;
+    }
+    .fusion-flex-column:last-child {
+      background-color: $mobile-header-orange;
+      margin-top: 10px;
+      padding: 10px 20px 8px;
+    }
+  }
+  .fusion-secondary-main-menu {
+    background-color: $lt-blue !important;
+  }
+  .fusion-body .fusion-mobile-nav-holder {
+    .fusion-mobile-selector,
+    .fusion-selector-down {
+      border-color: $sky-blue !important;
+    }
+  }
+  .fusion-mobile-selector {
+    .fusion-selector-down::before {
+      color: $sky-blue;
+    }
+  }
+
+/** HOMEPAGE **/
+  .home {
+    .fusion-layout-column {
+      text-align: center;
+      .fusion-text {
+        text-align: left;
+      }
+    }
+    h2.title-heading-left {
+      margin-left: auto !important;
+    }
+    .fusion-title.fusion-sep-none .title-heading-left {
+    }
+  }
+  .reduced-width {
+    width: auto !important;
+    p {
+      text-align: left !important;
+    }
+  }
 }
