@@ -765,6 +765,13 @@ footer .footer-menu-and-legal .footer-legal{
 
 /** HOMEPAGE **/
   .home {
+    #main .fusion-flex-container {
+      padding-top: 30px !important;
+      padding-bottom: 30px !important;
+    }
+    #main .post-content .fusion-flex-container:first-child {
+      padding-bottom: 0 !important;
+    }
     .fusion-layout-column {
       text-align: center;
       .fusion-text {
@@ -783,4 +790,19 @@ footer .footer-menu-and-legal .footer-legal{
       text-align: left !important;
     }
   }
+  // Buttons
+  .fusion-body .fusion-builder-column-1.homepage-slidertext-container {
+    .fusion-button {
+      margin-top: 10px;
+    }
+  }
+  .homepage-go-to-factfinder-button {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .fusion-content-boxes.content-boxes-icon-on-top .content-box-column {
+    margin-bottom: 30px !important;
+  }
+
 }
