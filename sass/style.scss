@@ -848,6 +848,65 @@ footer .footer-menu-and-legal .footer-legal{
     margin-bottom: 30px !important;
   }
 
+/** SEARCH THE FACTFINDER **/
+  .searchandfilter {
+    padding-bottom: 15px;
+    ul li {
+      float: none;
+      margin-bottom: 20px;
+    }
+    ul ul li {
+      margin-bottom: 8px;
+    }
+    li:nth-child(odd),
+    li:nth-child(even) {
+      width: 100%;
+      padding: 0;
+    }
+    li:nth-child(even) {
+      border-left: none;
+      border-right: none;
+    }
+  }
+  .claim-key-content {
+    display: block;
+    p {
+      float: none;
+      margin-bottom: 8px !important;
+    }
+  }
+
+// Claims list
+  .fusion-title.title.fusion-title-1 {
+    margin-bottom: 26px !important;
+  }
+  #main .factfinder-list .fusion-post-content-container h2 {
+    padding: 6px 10px 6px 50px;
+    line-height: 1.6rem;
+  }
+  [class *="category-"] .fusion-text h2,
+  .factfinder-list .fusion-post-content-container h2 {
+    font-size: 1.5rem !important;
+  }
+  .search-filter-results {
+    .alignright, .fusion-alignright {
+      float: none;
+      margin-left: 0;
+      margin-top: 12px;
+      display: inline-block;
+    }
+    .fusion-blog-layout-large article {
+      margin-bottom: 46px;
+    }
+  }
+  .factfinder-list .fusion-meta-info {
+    margin-top: 2px;
+    line-height: 1.5rem;
+  }
+  .factfinder-list .fusion-meta-info, .type-post .fusion-meta-info {
+    padding: .3em .8em .5em;
+  }
+
 /** INSIDE PAGES **/
   #main {
     .fusion-content-boxes.factfinder-callout-box {
