@@ -551,7 +551,7 @@ body.fusion-header-layout-v4:not(.fusion-header-layout-v6).fusion-top-header {
   background-image: url('./images/unsure.svg');
 }
 
-/** NORMAL PAGES **/
+/** INSIDE PAGES **/
 #main {
   .fusion-content-boxes.factfinder-callout-box {
     .heading .content-box-heading {
@@ -713,16 +713,59 @@ footer .footer-menu-and-legal .footer-legal{
 }
 
 @media (max-width: 800px) {
+/** GLOBAL **/
   body {
     line-height: $mobile-body-height !important;
     font-size: $mobile-body-size !important;
   }
+  .content-margin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow-x: auto;
+  }
+  html:not(.avada-has-site-width-percent) #main {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  body #main {
+    padding-top: 40px;
+    #content {
+      margin-bottom: 0;
+    }
+  }
+  .fusion-body:not(.avada-has-page-title-mobile-height-auto) .fusion-page-title-bar:not(.fusion-tb-page-title-bar),
+  .fusion-body:not(.avada-has-page-title-mobile-height-auto) .fusion-page-title-row {
+    min-height: unset !important;
+  }
+  .fusion-body .fusion-page-title-bar:not(.fusion-tb-page-title-bar) {
+    padding-bottom: 10px !important;
+  }
+  .fusion-page-title-bar {
+    .fusion-page-title-wrapper {
+      align-items: flex-end;
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+  }
   .post-content h1, .title h1, h1 {
     font-size: 2.0rem !important;
+    margin-bottom: 0;
   }
   #main h2, .post-content h2, h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 14px;
   }
+  #main {
+    .post-content h3, h3 {
+      font-size: 1.65rem;
+      margin-bottom: 7px;
+    }
+  }
+  #main .post-content p {
+    margin-bottom: 24px;
+  }
+
 /** HEADER **/
   .fusion-mobile-menu-design-classic.fusion-header-v4 .fusion-header, .fusion-mobile-menu-design-classic.fusion-header-v5 .fusion-header {
     padding: 10px 0 0 0 !important;
@@ -805,4 +848,30 @@ footer .footer-menu-and-legal .footer-legal{
     margin-bottom: 30px !important;
   }
 
+/** INSIDE PAGES **/
+  #main {
+    .fusion-content-boxes.factfinder-callout-box {
+      .heading .content-box-heading {
+        font-size: 1.6rem !important;
+        line-height: 1.7rem !important;
+      }
+    }
+  }
+  .fusion-content-boxes.factfinder-callout-box {
+    .content-container {
+      padding: 12px 26px;
+      p {
+        margin-bottom: 30px !important;
+      }
+    }
+  }
+  .fusion-content-boxes.factfinder-callout-box.factfinder-table {
+    .content-container {
+      overflow-x: auto;
+    }
+  }
+  .sponsor-logos img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
